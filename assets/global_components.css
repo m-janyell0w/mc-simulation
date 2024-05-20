@@ -1,5 +1,7 @@
 .button-class {
-    background-color: #14d735; /* Gray */
+    background-color: #505551; /* Gray */
+    color: #fff;
+    /* font-palette: #fff; White */
     border: none;
     color: rgb(0, 0, 0);
     padding: 15px 32px;
