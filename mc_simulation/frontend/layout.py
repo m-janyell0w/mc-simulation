@@ -5,7 +5,7 @@ from dash.dependencies import Input, Output
 import dash_bootstrap_components as dbc
 import plotly.graph_objs as go
 
-from .global_components import SYMBOL_DROPDOWN_OPTIONS
+from ..backend.global_components import SYMBOL_DROPDOWN_OPTIONS
 
 APP_LAYOUT = html.Div(
     id="app-layout-container",
@@ -58,7 +58,7 @@ APP_LAYOUT = html.Div(
                     ),
                     dbc.Col(
                             html.Div([
-                                html.Button("Start Simulation", id="submit-simu", n_clicks=0, className="button-class"),
+                                html.Button("Start Simulation", id="submit-simu", n_clicks=0),
                             ], style={"margin-top": "25px"}),
                         ),
                     html.Div(

@@ -4,7 +4,6 @@ import dash_html_components as html
 import numpy as np
 import plotly.graph_objs as go
 
-# from .app import app
 from .simulation import MonteCarloSimulation
 
 
