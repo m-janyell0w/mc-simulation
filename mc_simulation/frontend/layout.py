@@ -19,7 +19,6 @@ APP_LAYOUT = html.Div(
                 html.Hr(),
                 html.H3("Simulate the Development of your Investment using simple Statistics 💸📈"),
                 html.Br(),
-            # add a row
             html.Div(
                 className="row",
                 children =
@@ -58,7 +57,7 @@ APP_LAYOUT = html.Div(
                     ),
                     dbc.Col(
                             html.Div([
-                                html.Button("Start Simulation", id="submit-simu", n_clicks=0),
+                                html.Button("Start Simulation", id="submit-simu", n_clicks=0, className="button-class"),
                             ], style={"margin-top": "25px"}),
                         ),
                     html.Div(
@@ -75,20 +74,21 @@ APP_LAYOUT = html.Div(
         ),
         html.Br(),
         html.Div(id="simulation-progess-container",
-                 children="Simulation not started yet. Finalize your selection and click 'Start Simulation' to begin."),
+                 children="""Simulation not started yet. Finalize your selection
+                   and click 'Start Simulation' to begin ..."""),
+        html.Br(),
         dcc.Graph(id="simulation-graph-container"),
         html.Br(),
-        html.Div(id="simulation-summary-container",
-                 children=""),
+        html.H3("Summary Statistics"),
+        html.Hr(),
+        html.H4("Final Portfolio Value"),
+        html.Div(
+            id="summary-statistics-table",
+            children=[html.Table()],
+        ),
         html.Br(),
-        html.Div(id="returns-analysis-container",
-                 children=""),
+        html.H4("Annual Returns"),
+        html.Div(id="annual-returns-table",
+                 children=html.Table()),
     ],
 )
-
-TEST_LAYOUT = html.Div(
-                    [dbc.Col(
-                            [html.Button("TEST TESTS TEST", id="test-button"),
-                            dcc.Markdown(id="test-output", children="# Initial output")]
-                        )]
-                    )
