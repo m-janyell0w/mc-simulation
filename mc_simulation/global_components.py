@@ -11,4 +11,3 @@ symbols = symbol_reader.process_symbols(symbols)
 
 SYMBOL_DROPDOWN_OPTIONS = [{'label': f'{row["Security Name"]} ({row["ACT Symbol"]})',
                             'value': row["ACT Symbol"]} for index, row in symbols.iterrows()]
-# print(SYMBOL_DROPDOWN_OPTIONS)
